@@ -2,7 +2,17 @@ Post http://localhost:3333/events
 Content-Type: application/json
 
 {
-    "title": "Unite Submit",
-    "details": "Um evento para quem gosta de programação",
-    "maximumAttendees": 100
+    "title": "Novo evento 2",
+    "details": null,
+    "maximumAttendees": 1
+}
+
+###
+
+Post http://localhost:3333/events/04b7d94e-bd74-4377-968d-73561e6b8e9f/attendees
+Content-Type: application/json
+
+{
+    "name": "Diogo Pimenta",
+    "email": "teste2@gmail.com"
 }
