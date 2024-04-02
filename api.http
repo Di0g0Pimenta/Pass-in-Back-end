@@ -16,3 +16,7 @@ Content-Type: application/json
     "name": "Diogo Pimenta",
     "email": "teste2@gmail.com"
 }
+
+###
+
+Get http://localhost:3333/events/04b7d94e-bd74-4377-968d-73561e6b8e9f
