@@ -1,0 +1,8 @@
+Post http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title": "Unite Submit",
+    "details": "Um evento para quem gosta de programação",
+    "maximumAttendees": 100
+}
