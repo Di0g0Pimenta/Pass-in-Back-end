@@ -8,6 +8,8 @@ export async function getEventAttendes(app: FastifyInstance) {
     "/events/:eventId/attendees",
     {
       schema: {
+        summary: "Get event attendees",
+        tags: ["events"],
         params: z.object({
           eventId: z.string().uuid(),
         }),
@@ -16,17 +18,17 @@ export async function getEventAttendes(app: FastifyInstance) {
           pageIndex: z.string().nullish().default("0").transform(Number),
         }),
         response: {
-            200: z.object({
-                attendees: z.array(
-                    z.object({
-                        id: z.number(),
-                        name: z.string(),
-                        email: z.string().email(),
-                        createdAt: z.date(),
-                        checkInAt: z.date().nullable(),
-                    })
-                )
-            })
+          200: z.object({
+            attendees: z.array(
+              z.object({
+                id: z.number(),
+                name: z.string(),
+                email: z.string().email(),
+                createdAt: z.date(),
+                checkInAt: z.date().nullable(),
+              })
+            ),
+          }),
         },
       },
     },
@@ -59,9 +61,9 @@ export async function getEventAttendes(app: FastifyInstance) {
             },
         take: 10,
         skip: pageIndex * 10,
-        orderBy:{
-            CreatedAt:'desc'
-        }
+        orderBy: {
+          CreatedAt: "desc",
+        },
       });
 
       return reply.send({

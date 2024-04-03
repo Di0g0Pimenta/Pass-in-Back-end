@@ -8,6 +8,8 @@ export async function regisrterForEvent(app: FastifyInstance) {
     "/events/:eventId/attendees",
     {
       schema: {
+        summary: "Register and attendee",
+        tags: ["attendees"],
         body: z.object({
           name: z.string().min(4),
           email: z.string().email(),
