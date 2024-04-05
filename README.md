@@ -2,8 +2,6 @@
 
 ![Captura de ecrã 2024-04-05 115844](https://github.com/Di0g0Pimenta/Pass-in-Back-end/assets/106586929/6cb74ad9-5946-4477-9c58-44a38e2dd151)
 
-Link da ducumentação: https://pass-in-back-end.onrender.com/docs
-
 O pass.in é uma aplicação de **gestão de participantes em eventos presenciais**. 
 
 A ferramenta permite que o organizador cadastre um evento e abra uma página pública de inscrição.
@@ -32,3 +30,12 @@ O sistema fará um scan da credencial do participante para permitir a entrada no
 ### Requisitos não-funcionais
 
 - [x] O check-in no evento será realizado através de um QRCode;
+
+## Documentação da API (Swagger)
+
+Para documentação da API, acesse o link: https://pass-in-back-end.onrender.com/docs
+
+## Banco de dados
+
+Nessa aplicação vamos utilizar banco de dados relacional (SQL). Para ambiente de desenvolvimento seguiremos com o SQLite pela facilidade do ambiente.
+
